@@ -1,0 +1,21 @@
+import scaladrools.model.Temperature
+
+rule "Too Hot"
+   dialect "mvel"
+   when
+      temp : Temperature( value > 85 )
+   then
+      System.out.println(
+        temp.value.toString() + " F is too hot."
+        + " Declare HEAT WARNING!");
+end
+
+rule "Too Cold"
+   dialect "mvel"
+   when
+      temp : Temperature( value < 32 )
+   then
+      System.out.println(
+         temp.value.toString() + " F is too cold."
+         + " Declare FREEZE WARNING!");
+end

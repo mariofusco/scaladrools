@@ -1,0 +1,8 @@
+/target
+/project/boot
+/project/build/target
+*.iml
+*.iws
+*.iml
+/.idea
+/lib_managed
