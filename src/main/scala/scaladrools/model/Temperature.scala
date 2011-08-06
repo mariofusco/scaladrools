@@ -1,7 +1,6 @@
 package scaladrools.model
 
+import reflect.BeanProperty
 
-case class Temperature(value: Int) {
-  def getValue = value
-}
+case class Temperature(@BeanProperty value: Int)
 
